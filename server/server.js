@@ -28,7 +28,7 @@ require("./config/routes")(app);
 
 app.all("*", (req, res) => {
   res.sendFile(
-    path.join(__dirname, "/mern-exercise-tracker/public/index.html")
+    path.join(__dirname, "/public/index.html")
   );
 });
 
