@@ -34,10 +34,6 @@ export default class requestlist extends Component {
       .get("http://localhost:5000/api/messages")
       .then(res => this.setState({ messages: res.data.messages }));
   }
-  // sortList = () => {
-  //   const { messages } = this.state;
-
-  // };
 
   render() {
     return (

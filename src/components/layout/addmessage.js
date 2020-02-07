@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Redirect } from "react-router-dom";
+
 import M from "materialize-css";
 export default class addmessage extends Component {
   constructor(props) {
@@ -42,9 +42,7 @@ export default class addmessage extends Component {
       .post("http://localhost:5000/api/messages", message)
       .then(res => console.log(res.data));
 
-    if (e) {
-      return <Redirect to="/" />;
-    }
+    window.location = "/";
   };
 
   componentDidMount() {
