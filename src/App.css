@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card-title {
+  color: #29b6f6;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.page-footer {
+  text-align: center;
+  background-color: #29b6f6;
+  width: 100%;
+}
+.page-footer .container {
+  font-size: 10px;
+}
+.datepicker-date-display {
+  background: #29b6f6;
+}
+
+.is-today {
+  color: #29b6f6 !important;
+}
+.datepicker-table td.is-selected {
+  background: #29b6f6 !important;
+}
+.datepicker-cancel,
+.datepicker-done {
+  color: #29b6f6;
+}
+
+.divWithScroll {
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+@media only screen and (min-width: 374px) {
+  .App {
+    padding: 0 10px;
+  }
+  .md-0 {
+    display: none;
+  }
+  .md-12 {
+    display: block;
+  }
+  img {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #name {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  #message {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .lg-0 {
+    display: none;
+  }
+  .lg-12 {
+    display: block;
+  }
+  .App {
+    padding: 0px 0px;
+  }
+  img {
+    width: 45%;
+    height: auto;
+    position: fixed;
+    z-index: -1;
+  }
+  main {
+    z-index: 1;
+  }
+
+  #name {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  #date {
+    float: right;
+  }
+
+  #message {
+    font-size: 18px;
+  }
+}
