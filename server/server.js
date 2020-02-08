@@ -25,9 +25,13 @@ connection.once("open", () => {
   console.log("MongoDB database connection established successfully");
 });
 require("./config/routes")(app);
-app.all("*", (req, res)=> {
-  res.sendFile(path.join(__dirname, "/public/index.html"))
-})
+
+app.all("*", (req, res) => {
+  res.sendFile(
+    path.join(__dirname, "/mern-exercise-tracker/public/index.html")
+  );
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port : ${port}`);
 });
