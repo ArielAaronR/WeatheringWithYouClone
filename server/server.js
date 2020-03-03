@@ -26,10 +26,12 @@ connection.once("open", () => {
 });
 require("./config/routes")(app);
 
-app.all("*", (req, res) => {
-  res.sendFile(
-    path.join(__dirname, "/WeatheringWithYouClone/public/index.html")
-  );
+app.use(function(req, res, next) {
+  if(req.url.match(/.+\/static/)){
+      var url = req.url.match(/\/static.*/);
+      res.redirect(url[0]);
+  }else
+      res.status(404).send('Sorry cant find that!');
 });
 
 app.listen(port, () => {
