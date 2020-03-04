@@ -28,12 +28,13 @@ connection.once("open", () => {
 });
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/api/messages', require("./config/routes"));
+app.use(bodyParser.urlencoded({ extended: false }));
+require("./config/routes")(app);
+
 
 app.use(express.static("../build"));
 
-app.get("/api/messages", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../build/index.html")); // relative path
 });
 
